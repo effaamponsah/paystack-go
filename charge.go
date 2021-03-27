@@ -29,6 +29,11 @@ type BankAccount struct {
 	AccountNumber string `json:"account_number,omitempty"`
 }
 
+type MobileMoney struct {
+	Phone    string `json:"phone,omitempty"`
+	Provider string `json:"provider,omitempty"`
+}
+
 // ChargeRequest represents a Paystack charge request
 type ChargeRequest struct {
 	Email             string       `json:"email,omitempty"`
@@ -39,6 +44,7 @@ type ChargeRequest struct {
 	AuthorizationCode string       `json:"authorization_code,omitempty"`
 	Pin               string       `json:"pin,omitempty"`
 	Metadata          *Metadata    `json:"metadata,omitempty"`
+	MobileMoney       *MobileMoney `json:"mobile_money,omitempty"`
 }
 
 // Create submits a charge request using card details or bank details or authorization code
