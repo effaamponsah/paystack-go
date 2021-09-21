@@ -1,14 +1,10 @@
-[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/rpip/paystack-go) [![Build Status](https://travis-ci.org/rpip/paystack-go.svg?branch=master)](https://travis-ci.org/rpip/paystack-go)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/rpip/paystack-go) [![Build Status](https://travis-ci.org/rpip/paystack-go.svg?branch=master)](https://travis-ci.org/rpip/paystack-go) 
 
 # Go library for the Paystack API.
 
 paystack-go is a Go client library for accessing the Paystack API.
 
 Where possible, the services available on the client groups the API into logical chunks and correspond to the structure of the Paystack API documentation at https://developers.paystack.co/v1.0/reference.
-
-## NOTE
-
-I haven't personally used this library since early 2018. I no longer actively maintain this project. My apologies to those of you who have come to rely on this library. If you are interested in becoming the new maintainer, send me an email and we can discuss yao [at] adzaku [dot] com. 
 
 ## Usage
 
@@ -76,10 +72,9 @@ See the test files for more examples.
 Test this library in a docker container:
 
 ```bash
-$ make docker && docker run -i -t paystack:latest
+# PAYSTACK_KEY is an environment variable that should be added to your rc file. i.e .bashrc
+$ make docker && docker run -e PAYSTACK_KEY -i -t paystack:latest
 ```
-
-To use a different API key, update the API key in runtests.sh file.
 
 ## TODO
 - [ ] Maybe support request context?
